@@ -37,6 +37,7 @@
   gap: 11px;
 }
 
+/* 5. Работа над кнопками переключения тем */
 .header__theme-menu-button {
   appearance: none;
   display: block;
@@ -65,6 +66,7 @@
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid currentColor;
 }
+/* /5. Работа над кнопками переключения тем */
 
 .title {
   /* 3. Чтобы заголовок в шапке красиво адаптировался и при этом хорошо выглядел на больших и маленьких экранах, используйте clamp(). */
@@ -82,30 +84,38 @@
   /* 3. Параграфу в шапке задан фоновый цвет. Такой же декоративный приём встречается в основном блоке сайта. Используйте отдельный класс title-decor  */
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.3;
-  background-color: var(--title-decor-bg-color);
   color: var(--title-decor-text-color);
+  line-height: 1.3;
+
+  background-color: var(--title-decor-bg-color);
 }
 
 .rec {
   display: var(--rec-ico);
   position: absolute;
+
   font-size: 18px;
   color: var(--decor-color);
+
   inset-inline-end: 2.1em;
-  inset-block-start: calc(10px + 2px);
+  inset-block-start: 10px;
 }
 
 /* 3. Точку справа от надписи реализуйте через псевдоэлемент */
 .rec::after {
   content: '';
   position: absolute;
+
   inline-size: 10px;
   block-size: 10px;
+
   border-radius: 50%;
+
   background-color: var(--decor-color);
+
   inset-inline-start: 42px;
   inset-block-start: 7px;
+
   box-shadow: 0px 0px 8px var(--decor-color);
 }
 
@@ -113,10 +123,13 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
+
   inline-size: 25px;
   block-size: 25px;
+
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
+
   inset-inline-start: calc(100% - 10px - 25px);
   inset-block-start: 10px;
  }
@@ -124,10 +137,13 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
+
   inline-size: 25px;
   block-size: 25px;
+
   border-left: 1px solid var(--decor-color);
   border-bottom: 1px solid var(--decor-color);
+
   inset-inline-start: 10px;
   inset-block-end: 10px;
 } 
@@ -138,7 +154,9 @@
 .content {
   display: grid;
   grid-template-columns: 1fr;
+
   gap: 50px;
+
   margin-block-start: 40px;
   padding-inline: 10px;
 }
@@ -146,6 +164,7 @@
 .content__section {
   display: grid;
   grid-template-columns: 1fr;
+
   gap: 20px;
 }
 
@@ -157,12 +176,14 @@
 .card__list {
   display: grid;
   grid-template-columns: 1fr;
+
   gap: 20px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
 }
 
@@ -196,6 +217,7 @@
 
 .content__section-collection {
 	display: grid;
+
 	gap: 10px;
 }
  
@@ -203,6 +225,7 @@
   inline-size: 100%;
   block-size: 100%;
   max-block-size: 100%;
+
   object-fit: cover;
 }
 
@@ -210,11 +233,13 @@
 .footer {
   display: flex;
   position: relative;
-  min-block-size: 668px;
-  block-size: 100vh;
-  text-align: center;
+  
   align-items: center;
   justify-content: center;
+
+  min-block-size: 668px;
+  block-size: 100vh;
+
   margin-block-start: 40px;
 }
 
@@ -235,10 +260,11 @@
   }
   
   .header__title-subtitle {
-    padding-inline-start: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-self: end;
+
+    padding-inline-start: 20px;
   }
  
   .header__title-subtitle .title-decor {
@@ -247,11 +273,12 @@
 
   .rec {
     inset-inline-end: 48px;
-    inset-block-start: calc(20px + 2px);
+    inset-block-start: 20px;
   }
 
   .content {
     gap: 80px;
+
     margin-block-start: 60px;
     padding-inline: 20px;
   }
@@ -266,11 +293,11 @@
   }
 
   .content__section-collection {
-	display: grid;
+	  display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
     
-	grid-auto-flow: dense;
+	  grid-auto-flow: dense;
 	
     gap: 20px;
   }
@@ -317,6 +344,7 @@
   .header__theme-menu-list {
     display: flex;
     flex-direction: row;
+
     gap: 10px;
   }
 
