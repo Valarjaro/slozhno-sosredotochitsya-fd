@@ -222,7 +222,6 @@
   text-shadow: 2px 2px 0 var(--shadow-color);
 }
 
-/* адаптив */
 
 @media (width >= 768px) {
   .header {
@@ -329,10 +328,6 @@
 
   .content__section-reasons .card__list {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .content__section-how-to-focus .title-decor {
-    grid-column: 2 / 4;
   }
 
   .content__section-how-to-focus .card__list {
