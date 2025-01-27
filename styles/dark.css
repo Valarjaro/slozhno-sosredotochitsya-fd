@@ -9,8 +9,21 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-}
+  --main-font: 'IBM Plex mono';
+  --cover-image: url(../images/cover-image-dark.png);
+  --rec-ico: var(--ico-display-default);
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  --main-bg-color: var(--dark-blue);
+  --title-decor-text-color: var(--dark-blue);
+
+  --title-decor-bg-color: var(--purple);
+  --content-title-text-color: var(--purple);
+  --decor-color: var(--purple);
+  --menu-text-color: var(--purple);
+  --shadow-color: var(--purple);
+  --hover-border-color: var(--purple-transparency);
+
+  --text-color: var(--light-lavender);
+
+  --focus-color: var(--fuchsia);
 }

@@ -3,37 +3,42 @@
   и их переопределение под различные устройства
 */
 :root {
+  --main-font: 'IBM Plex mono';
   --cover-image: url(../images/cover-image-dark.png);
-  
-  --main-font-family: 'IBM Plex mono';
-  
+  --rec-ico: var(--ico-display-default);
+  --ico-display-default: block;
+  --ico-display-hone: none;
 
-  --fuchsia:#DB00FF;
-  --purple: #FF0070;
+  --dark: #353430;
   --dark-blue: #000028;
+  --dark-transparency: rgb(0,0,40,0.4);
+  
+  --purple: #FF0070;
+  --purple-transparency:  rgb(255,0,112,0.4);
   
   --pink: #FFC2E6;
-  --light-lavender: #F1B2CE;
   --pink-lavander: #FFF1F7;
   --pink-purple: #FF8DCB;
-  --dark: #353430;
 
-  --purple-transparency:  rgb(255,0,112,0.4);
-  --dark-transparency: rgb(0,0,40,0.4);
+  --light-lavender: #F1B2CE;
 
-  --icon-visible: block;
-  --icon-hidden: none;
+  --fuchsia:#DB00FF;
+  
+  
 
-  --main-bg-color: var(--dark-blue, #000028);
-  --header-description-bg-color: var(--purple, #FF0070);
-  --header-description-text-color: var(--dark-blue, #000028);
-  --main-title-text-color: var(--purple, #FF0070);
-  --decoration-color: var(--purple, #FF0070);
-  --menu-text-color: var(--purple, #FF0070);
-  --menu-border-color: var(--purple, #FF0070);
-  --hover-border-color: var(--purple-transparency, rgb(255,0,112,0.4));
-  --text-color: var(--light-lavender, #F1B2CE);
-  --title-color: var(--fuchsia, #DB00FF);
-  --shadow-color: var(--purple, #FF0070);
-  --bg-image: url(../images/cover-image-dark.png);
+  --main-bg-color: var(--dark-blue);
+  --title-decor-text-color: var(--dark-blue);
+  
+  --focus-color: var(--fuchsia);
+  --focus-color: var(--fuchsia);
+
+  --title-decor-bg-color: var(--purple);
+  --content-title-text-color: var(--purple);
+  --decor-color: var(--purple);
+  --menu-text-color: var(--purple);
+  --shadow-color: var(--purple);
+
+  --hover-border-color: var(--purple-transparency);
+
+  --text-color: var(--light-lavender);
 }
