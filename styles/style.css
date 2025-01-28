@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   font-size: 18px;
   line-height: 1.3;
   background-color: var(--main-bg-color);
@@ -23,7 +23,7 @@
   align-items: center;
   block-size: 100vh;
   min-block-size: 668px;
-  padding: 10px;
+  padding: var(--padding);
 }
 
 .header__theme-menu {
@@ -98,7 +98,7 @@
   color: var(--decor-color);
 
   inset-inline-end: 2.1em;
-  inset-block-start: 10px;
+  inset-block-start: var(--padding);
 }
 
 /* 3. Точку справа от надписи реализуйте через псевдоэлемент */
@@ -130,8 +130,8 @@
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
 
-  inset-inline-start: calc(100% - 10px - 25px);
-  inset-block-start: 10px;
+  inset-inline-start: calc(100% - var(--padding) - 25px);
+  inset-block-start: var(--padding);
  }
 
 .decorated-zone::after {
@@ -144,8 +144,8 @@
   border-left: 1px solid var(--decor-color);
   border-bottom: 1px solid var(--decor-color);
 
-  inset-inline-start: 10px;
-  inset-block-end: 10px;
+  inset-inline-start: var(--padding);
+  inset-block-end: var(--padding);
 } 
 
 /* /header */
@@ -158,7 +158,7 @@
   gap: 50px;
 
   margin-block-start: 40px;
-  padding-inline: 10px;
+  padding-inline: var(--padding);
 }
 
 .content__section {
@@ -173,6 +173,13 @@
   font-size: 18px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
 .card__list {
   display: grid;
   grid-template-columns: 1fr;
@@ -180,7 +187,7 @@
   gap: 20px;
 }
 
-.card {
+.card__list-item {
   display: flex;
   flex-direction: column;
 
@@ -189,6 +196,10 @@
 
 .content__section-how-to-focus h4 {
   font-weight: 400;
+}
+
+.content__section-how-to-focus .card {
+  gap: 20px;
 }
 
 .card-text {
@@ -264,7 +275,7 @@
     grid-template-columns: 1fr 1fr;
     justify-self: end;
 
-    padding-inline-start: 20px;
+    padding-inline-start: var(--padding);
   }
  
   .header__title-subtitle .title-decor {
@@ -273,14 +284,14 @@
 
   .rec {
     inset-inline-end: 48px;
-    inset-block-start: 20px;
+    inset-block-start: var(--padding);
   }
 
   .content {
     gap: 80px;
 
     margin-block-start: 60px;
-    padding-inline: 20px;
+    padding-inline: var(--padding);
   }
 
  .content__section {
@@ -336,7 +347,7 @@
 @media (width >= 1024px) {
   .header__theme-menu {
     margin-top: 0;
-    padding-left: 20px;
+    padding-left: var(--padding);
     justify-self: center;
     align-self: start;
   }
@@ -360,7 +371,8 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .content__section-how-to-focus .card__list {
+  .content__section-how-to-focus .card {
     grid-column: 2 / 4;
   }
+  
 }
